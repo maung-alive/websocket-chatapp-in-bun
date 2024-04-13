@@ -1,0 +1,13 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./db.sqlite3"
+}
+
+model ChatRoom {
+  id    String @id @default(uuid())
+  name  String?
+}
